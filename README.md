@@ -8,7 +8,7 @@ Built by:
 
 -   Benjamin Allegrezza
 
-This was a weekend project to exceed the minimum viable product for our Event Tracker [assignment](https://github.com/vintonl/EventTrackerProject/blob/master/Assignment.md).
+This was a weekend project to exceed the minimum viable product for our Event Tracker [assignment](https://github.com/SkillDistillery/SD31/tree/master/rest/EventTracker).
 
 ### Overview:
 
