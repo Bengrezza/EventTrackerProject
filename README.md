@@ -14,6 +14,10 @@ This was a weekend project to exceed the minimum viable product for our Event Tr
 
 This program is designed to be a REST API that creates, reads, updates and deletes user and beer data from a database built using MySQL Workbench and connecting with using Spring Data JPA.
 
+### Database Schema Design:
+
+![Image of MySQL Database Schema](https://github.com/Bengrezza/EventTrackerProject/blob/main/DB/untappeddbERD.png)
+
 
 ### Routes
 
