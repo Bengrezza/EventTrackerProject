@@ -9,10 +9,10 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.skilldistillery.untapped.entities.Beer;
-import com.skilldistillery.untapped.entities.User;
 import com.skilldistillery.beers.repositories.BeerRepository;
 import com.skilldistillery.beers.repositories.UserRepository;
+import com.skilldistillery.untapped.entities.Beer;
+import com.skilldistillery.untapped.entities.User;
 
 @Service
 public class BeerServiceImpl implements BeerService {
@@ -60,10 +60,10 @@ public class BeerServiceImpl implements BeerService {
 			managedbeer.setName(beer.getName());
 			managedbeer.setDescription(beer.getDescription());
 			managedbeer.setIngredients(beer.getIngredients());
-			managedbeer.setCaffeine(beer.getAlcohol());
+			managedbeer.setAlcohol(beer.getAlcohol());
 			managedbeer.setVolume(beer.getVolume());
 			managedbeer.setCalories(beer.getCalories());
-			managedbeer.setCaffeinated(beer.isAlcoholic());
+			managedbeer.setAlcoholic(beer.isAlcoholic());
 			managedbeer.setContainsAlcohol(beer.isContainsAlcohol());
 			managedbeer.setActive(beer.isActive());
 
@@ -108,7 +108,7 @@ public class BeerServiceImpl implements BeerService {
 	}
 
 	@Override
-	public List<Beer> findByAlcoholBetween(Integer min, Integer max) {
+	public List<Beer> findByAlcoholBetween(Double min, Double max) {
 		return beerRepo.findByAlcoholBetween(min, max);
 	}
 

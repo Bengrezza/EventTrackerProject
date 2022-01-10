@@ -89,7 +89,7 @@ public class BeerController {
 	}
 
 	@GetMapping("beers/{min}/{max}")
-	public List<Beer> searchByMinMaxAlcohol(@PathVariable Integer min, @PathVariable Integer max,
+	public List<Beer> searchByMinMaxAlcohol(@PathVariable Double min, @PathVariable Double max,
 			HttpServletRequest req, HttpServletResponse resp) {
 		List<Beer> beers = beerSvc.findByAlcoholBetween(min, max);
 

@@ -27,7 +27,7 @@ public class Beer {
 	private String description;
 	private String ingredients;
 	private boolean alcoholic;
-	private Integer alcohol;
+	private Double alcohol;
 	@Column(name = "contains_alcohol")
 	private boolean containsAlcohol;
 	private Integer calories;
@@ -85,16 +85,16 @@ public class Beer {
 		return alcoholic;
 	}
 
-	public void setCaffeinated(boolean alcoholic) {
+	public void setAlcoholic(boolean alcoholic) {
 		this.alcoholic = alcoholic;
 	}
 
-	public Integer getAlcohol() {
+	public Double getAlcohol() {
 		return alcohol;
 	}
 
-	public void setCaffeine(Integer caffeine) {
-		this.alcohol = caffeine;
+	public void setAlcohol(Double alcohol) {
+		this.alcohol = alcohol;
 	}
 
 	public boolean isContainsAlcohol() {

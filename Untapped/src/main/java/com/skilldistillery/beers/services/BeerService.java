@@ -19,7 +19,7 @@ public interface BeerService {
 
 	List<Beer> findByKeyword(String keyword);
 
-	List<Beer> findByAlcoholBetween(Integer min, Integer max);
+	List<Beer> findByAlcoholBetween(Double min, Double max);
 
 	List<Beer> findByCreatedAt(String date);
 

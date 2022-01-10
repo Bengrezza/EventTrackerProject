@@ -80,7 +80,7 @@ public class UserController {
 		return user;
 	}
 
-	@PostMapping("users/{id}/beererages")
+	@PostMapping("users/{id}/beers")
 	public Beer createbeererage(@PathVariable int id, @RequestBody Beer beer, HttpServletRequest req,
 			HttpServletResponse resp) {
 		Beer beerCreated = null;
@@ -103,7 +103,7 @@ public class UserController {
 		return beerCreated;
 	}
 
-	@DeleteMapping("users/{userId}/beererages/{beerId}")
+	@DeleteMapping("users/{userId}/beers/{beerId}")
 	public void deleteComment(@PathVariable int userId, @PathVariable int beerId, HttpServletRequest req,
 			HttpServletResponse resp) {
 
