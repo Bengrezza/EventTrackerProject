@@ -58,14 +58,14 @@ Java, Java Persistence API, REST API, Spring Boot, Gradle, MySQL Workbench, Post
 
 ### Lessons learned:
 
-This project helped me better grasp the capabilities of REST API by allowing me to better learn how to:
+This project helped me grasp the capabilities of REST API and allowed me to learn how to:
 
 -   Create a JPA Project
 
     -   Create a Java entity class POJO(Plain Old Java Object) that models your database table.
     -   Map your POJO using JPA.
 
--   Configure a Spring Boot app to publish a REST API.
+-   Configure a Spring Boot application that published a REST API.
     -   Use Spring REST annotations.
     -   Use Spring Data JPA to perform all CRUD operations.
     -   Send and receive JSON.
