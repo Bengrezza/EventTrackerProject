@@ -46,14 +46,14 @@ class BeerTest {
 	@Test
 	@DisplayName("Test the primary beer fields")
 	void test() {
-		assertEquals("Night Hawk", beer.getName());
-		assertEquals("Chocolate Stout", beer.getDescription());
-		assertEquals("barley, malt, chocolate, water", beer.getIngredients());
+		assertEquals("Lagreat Don't Hate", beer.getName());
+		assertEquals("Lager", beer.getDescription());
+		assertEquals("barley, malt, water", beer.getIngredients());
 		assertFalse(beer.isAlcoholic());
 		assertFalse(beer.isContainsAlcohol());
 		assertEquals(0, beer.getAlcohol());
-		assertEquals(100, beer.getCalories());
-		assertEquals(8, beer.getVolume());
+		assertEquals(88, beer.getCalories());
+		assertEquals(16, beer.getVolume());
 		assertTrue(beer.isActive());
 		assertTrue(beer.getCreatedAt().toString().contains("2022"));
 		assertTrue(beer.getUpdatedAt().toString().contains("2022"));

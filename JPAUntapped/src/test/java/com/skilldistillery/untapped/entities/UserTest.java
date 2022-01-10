@@ -53,7 +53,7 @@ class UserTest {
 	@Test
 	@DisplayName("Test relationship with beer")
 	void test1() {
-		assertEquals("Night Hawk", user.getBeers().get(0).getName());
+		assertEquals("Lagreat Don't Hate", user.getBeers().get(0).getName());
 	}
 
 }
