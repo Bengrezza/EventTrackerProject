@@ -62,7 +62,7 @@ This project helped me better grasp the capabilities of REST API by allowing me 
 
 -   Create a JPA Project
 
-    -   Create a Java entity class POJO that models your database table.
+    -   Create a Java entity class POJO(Plain Old Java Object) that models your database table.
     -   Map your POJO using JPA.
 
 -   Configure a Spring Boot app to publish a REST API.
