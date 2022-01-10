@@ -129,7 +129,7 @@ public class BeerServiceImpl implements BeerService {
 	@Override
 	public Beer createBeer(int id, Beer beer) throws Exception {
 		if (!beer.isAlcoholic() && beer.getAlcohol() > 0) {
-			throw new Exception("Beer can not contain alcohol and Alcoholic be false.");
+			throw new Exception("Beer cannot contain alcohol and Alcoholic be false.");
 		}
 
 		Optional<User> userOpt = uRepo.findById(id);
