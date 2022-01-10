@@ -1,4 +1,4 @@
-# Beer Tracker
+# UnTapped - The World's Finest Beer Tracker
 
 ## REST API Weekend Project
 
