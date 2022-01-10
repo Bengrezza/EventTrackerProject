@@ -27,12 +27,12 @@ This program is designed to be a REST API that creates, reads, updates and delet
 | `List<Beer>`     | `GET api/beers/caffeinated`                       | Get all caffeinated beers                              |
 | `List<Beer>`     | `GET api/beers/{min}/{max}`                       | Get all beers by min and max caffeine mg's                      |
 | `List<Beer>`     | `GET api/beers/name/{keyword}`                    | Get all beers by keyword search of name                            |
-| `List<Beverage>` | `GET api/beers/date/{date}`                       | Get all beverages by date (yyyy-MM-dd)                             |
+| `List<Beer>`     | `GET api/beers/date/{date}`                           | Get all beverages by date (yyyy-MM-dd)                       |
 | `List<User>`     | `GET api/users`                                   | Get all users                              |
 | `User`           | `POST api/users`                                  | Create user                               |
 | `User`           | `PUT api/users/{id}`                              | Update a user by id                                 |
-| `Beverage`       | `POST api/users/{id}/beers`                       | Create beer for user by id                                 |
-| `Void`           | `DELETE api/users/{userId}/beverages/{beerId}`    | Delete a beer by user id and beer id                            |
+| `Beer`           | `POST api/users/{id}/beers`                           | Create beer for user by id                                 |
+| `Void`           | `DELETE api/users/{userId}/beer/{beerId}`         | Delete a beer by user id and beer id                            |
 
 ### Technologies used:
 
