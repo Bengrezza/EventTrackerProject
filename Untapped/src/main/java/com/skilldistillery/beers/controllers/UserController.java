@@ -81,7 +81,7 @@ public class UserController {
 	}
 
 	@PostMapping("users/{id}/beers")
-	public Beer createbeererage(@PathVariable int id, @RequestBody Beer beer, HttpServletRequest req,
+	public Beer createbeer(@PathVariable int id, @RequestBody Beer beer, HttpServletRequest req,
 			HttpServletResponse resp) {
 		Beer beerCreated = null;
 		try {
@@ -104,7 +104,7 @@ public class UserController {
 	}
 
 	@DeleteMapping("users/{userId}/beers/{beerId}")
-	public void deleteComment(@PathVariable int userId, @PathVariable int beerId, HttpServletRequest req,
+	public void deleteBeer(@PathVariable int userId, @PathVariable int beerId, HttpServletRequest req,
 			HttpServletResponse resp) {
 
 		try {
