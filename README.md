@@ -21,7 +21,7 @@ This program is designed to be a REST API that creates, reads, updates and delet
 | ---------------- | --------------------------------------------- | ---------------------------------------------- |
 | `List<Beer>`     | `GET api/beers`                                   | Get all beers                              |
 | `Beer`           | `GET api/beers/{id}`                              | Get one beer by id                                 |
-| `Beer`           | `POST api/beer`                                   | Create beer                               |
+| `Beer`           | `POST api/beers`                                   | Create beer                               |
 | `Beer`           | `PUT api/beers/{id}`                              | Update a beer by id                                 |
 | `Void`           | `DELETE api/beers/{id}`                           | Delete a beer by id                                 |
 | `List<Beer>`     | `GET api/beers/alcoholic`                         | Get all alcoholic beers                              |
