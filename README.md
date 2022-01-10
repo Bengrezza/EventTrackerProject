@@ -1,4 +1,4 @@
-# Beverage Tracker
+# Beer Tracker
 
 ## REST API Weekend Project
 
@@ -21,13 +21,13 @@ This program is designed to be a REST API that creates, reads, updates and delet
 | ---------------- | --------------------------------------------- | ---------------------------------------------- |
 | `List<Beer>`     | `GET api/beers`                                   | Get all beers                              |
 | `Beer`           | `GET api/beers/{id}`                              | Get one beer by id                                 |
-| `Beer`           | `POST api/beverages`                              | Create beer                               |
+| `Beer`           | `POST api/beer`                                   | Create beer                               |
 | `Beer`           | `PUT api/beers/{id}`                              | Update a beer by id                                 |
 | `Void`           | `DELETE api/beers/{id}`                           | Delete a beer by id                                 |
 | `List<Beer>`     | `GET api/beers/caffeinated`                       | Get all caffeinated beers                              |
 | `List<Beer>`     | `GET api/beers/{min}/{max}`                       | Get all beers by min and max caffeine mg's                      |
 | `List<Beer>`     | `GET api/beers/name/{keyword}`                    | Get all beers by keyword search of name                            |
-| `List<Beer>`     | `GET api/beers/date/{date}`                           | Get all beverages by date (yyyy-MM-dd)                       |
+| `List<Beer>`     | `GET api/beers/date/{date}`                       | Get all beer by date (yyyy-MM-dd)                                |
 | `List<User>`     | `GET api/users`                                   | Get all users                              |
 | `User`           | `POST api/users`                                  | Create user                               |
 | `User`           | `PUT api/users/{id}`                              | Update a user by id                                 |
