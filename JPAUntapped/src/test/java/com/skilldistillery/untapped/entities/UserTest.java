@@ -45,15 +45,15 @@ class UserTest {
 	@Test
 	@DisplayName("Test the primary fields")
 	void test() {
-		assertEquals("Bobby", user.getFirstName());
-		assertEquals("Lee", user.getLastName());
+		assertEquals("Johnny", user.getFirstName());
+		assertEquals("Bobbert", user.getLastName());
 		assertTrue(user.getCreatedAt().toString().contains("2019"));
 	}
 
 	@Test
 	@DisplayName("Test relationship with beverage")
 	void test1() {
-		assertEquals("water", user.getBeverages().get(0).getName());
+		assertEquals("Night Hawk", user.getBeverages().get(0).getName());
 	}
 
 }

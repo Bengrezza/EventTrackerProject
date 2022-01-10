@@ -41,7 +41,7 @@ public class BeerServiceImpl implements BeerService {
 
 	@Override
 	public Beer createBeer(Beer beer) {
-		if (!beer.isCaffeinated() && beer.getCaffeine() > 0) {
+		if (!beer.isAlcoholic() && beer.getAlcohol() > 0) {
 			return null;
 		}
 		return beerRepo.saveAndFlush(beer);
@@ -49,7 +49,7 @@ public class BeerServiceImpl implements BeerService {
 
 	@Override
 	public Beer updateBeer(int id, Beer beer) throws Exception {
-		if (!beer.isCaffeinated() && beer.getCaffeine() > 0) {
+		if (!beer.isAlcoholic() && beer.getAlcohol() > 0) {
 			throw new Exception();
 		}
 
@@ -60,10 +60,10 @@ public class BeerServiceImpl implements BeerService {
 			managedbeer.setName(beer.getName());
 			managedbeer.setDescription(beer.getDescription());
 			managedbeer.setIngredients(beer.getIngredients());
-			managedbeer.setCaffeine(beer.getCaffeine());
+			managedbeer.setCaffeine(beer.getAlcohol());
 			managedbeer.setVolume(beer.getVolume());
 			managedbeer.setCalories(beer.getCalories());
-			managedbeer.setCaffeinated(beer.isCaffeinated());
+			managedbeer.setCaffeinated(beer.isAlcoholic());
 			managedbeer.setContainsAlcohol(beer.isContainsAlcohol());
 			managedbeer.setActive(beer.isActive());
 
@@ -98,8 +98,8 @@ public class BeerServiceImpl implements BeerService {
 	}
 
 	@Override
-	public List<Beer> findByCaffeinated() {
-		return beerRepo.findByCaffeinatedTrue();
+	public List<Beer> findByAlcoholic() {
+		return beerRepo.findByAlcoholicTrue();
 	}
 
 	@Override
@@ -108,8 +108,8 @@ public class BeerServiceImpl implements BeerService {
 	}
 
 	@Override
-	public List<Beer> findByCaffeineBetween(Integer min, Integer max) {
-		return beerRepo.findByCaffeineBetween(min, max);
+	public List<Beer> findByAlcoholBetween(Integer min, Integer max) {
+		return beerRepo.findByAlcoholBetween(min, max);
 	}
 
 	@Override
@@ -128,8 +128,8 @@ public class BeerServiceImpl implements BeerService {
 
 	@Override
 	public Beer createBeer(int id, Beer beer) throws Exception {
-		if (!beer.isCaffeinated() && beer.getCaffeine() > 0) {
-			throw new Exception("Beer can not contain caffine and Caffeinated be false.");
+		if (!beer.isAlcoholic() && beer.getAlcohol() > 0) {
+			throw new Exception("Beer can not contain alcohol and Alcoholic be false.");
 		}
 
 		Optional<User> userOpt = uRepo.findById(id);

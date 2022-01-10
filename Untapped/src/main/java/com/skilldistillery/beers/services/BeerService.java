@@ -15,11 +15,11 @@ public interface BeerService {
 
 	boolean deleteBeer(int id);
 
-	List<Beer> findByCaffeinated();
+	List<Beer> findByAlcoholic();
 
 	List<Beer> findByKeyword(String keyword);
 
-	List<Beer> findByCaffeineBetween(Integer min, Integer max);
+	List<Beer> findByAlcoholBetween(Integer min, Integer max);
 
 	List<Beer> findByCreatedAt(String date);
 

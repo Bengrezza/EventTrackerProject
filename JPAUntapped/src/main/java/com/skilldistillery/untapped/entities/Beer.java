@@ -26,8 +26,8 @@ public class Beer {
 	private String name;
 	private String description;
 	private String ingredients;
-	private boolean caffeinated;
-	private Integer caffeine;
+	private boolean alcoholic;
+	private Integer alcohol;
 	@Column(name = "contains_alcohol")
 	private boolean containsAlcohol;
 	private Integer calories;
@@ -81,20 +81,20 @@ public class Beer {
 		this.ingredients = ingredients;
 	}
 
-	public boolean isCaffeinated() {
-		return caffeinated;
+	public boolean isAlcoholic() {
+		return alcoholic;
 	}
 
-	public void setCaffeinated(boolean caffeinated) {
-		this.caffeinated = caffeinated;
+	public void setCaffeinated(boolean alcoholic) {
+		this.alcoholic = alcoholic;
 	}
 
-	public Integer getCaffeine() {
-		return caffeine;
+	public Integer getAlcohol() {
+		return alcohol;
 	}
 
 	public void setCaffeine(Integer caffeine) {
-		this.caffeine = caffeine;
+		this.alcohol = caffeine;
 	}
 
 	public boolean isContainsAlcohol() {
@@ -156,7 +156,7 @@ public class Beer {
 	@Override
 	public String toString() {
 		return "Beer [id=" + id + ", name=" + name + ", description=" + description + ", ingredients=" + ingredients
-				+ ", caffeinated=" + caffeinated + ", caffeine=" + caffeine + ", containsAlcohol=" + containsAlcohol
+				+ ", alcoholic=" + alcoholic + ", alcohol=" + alcohol + ", containsAlcohol=" + containsAlcohol
 				+ ", calories=" + calories + ", volume=" + volume + ", active=" + active + ", createdAt=" + createdAt
 				+ ", updatedAt=" + updatedAt + ", user=" + user + "]";
 	}

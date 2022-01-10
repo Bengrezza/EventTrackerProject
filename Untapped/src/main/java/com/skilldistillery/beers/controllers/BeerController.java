@@ -59,9 +59,9 @@ public class BeerController {
 		return beers;
 	}
 
-	@GetMapping("beers/caffeinated")
-	public List<Beer> showCaffeinatedBeers(HttpServletRequest req, HttpServletResponse resp) {
-		List<Beer> beers = beerSvc.findByCaffeinated();
+	@GetMapping("beers/alcoholic")
+	public List<Beer> showAlcoholicBeers(HttpServletRequest req, HttpServletResponse resp) {
+		List<Beer> beers = beerSvc.findByAlcoholic();
 
 		if (beers == null) {
 			resp.setStatus(404);
@@ -89,9 +89,9 @@ public class BeerController {
 	}
 
 	@GetMapping("beers/{min}/{max}")
-	public List<Beer> searchByMinMaxCaffeine(@PathVariable Integer min, @PathVariable Integer max,
+	public List<Beer> searchByMinMaxAlcohol(@PathVariable Integer min, @PathVariable Integer max,
 			HttpServletRequest req, HttpServletResponse resp) {
-		List<Beer> beers = beerSvc.findByCaffeineBetween(min, max);
+		List<Beer> beers = beerSvc.findByAlcoholBetween(min, max);
 
 		if (beers == null) {
 			resp.setStatus(404);

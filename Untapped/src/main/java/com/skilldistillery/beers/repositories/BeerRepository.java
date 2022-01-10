@@ -11,11 +11,11 @@ import com.skilldistillery.untapped.entities.Beer;
 
 public interface BeerRepository extends JpaRepository<Beer, Integer> {
 
-	List<Beer> findByCaffeinatedTrue();
+	List<Beer> findByAlcoholicTrue();
 
 	List<Beer> findByNameContaining(String keyword);
 
-	List<Beer> findByCaffeineBetween(Integer min, Integer max);
+	List<Beer> findByAlcoholBetween(Integer min, Integer max);
 
 	List<Beer> findByCreatedAtBetween(Date start, Date end);
 }
