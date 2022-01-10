@@ -6,7 +6,7 @@
 
 Built by:
 
--   Benjamin Allegrezza
+-   Ben Allegrezza
 
 This was a weekend project to exceed the minimum viable product for our Event Tracker [assignment](https://github.com/SkillDistillery/SD31/tree/master/rest/EventTracker).
 
