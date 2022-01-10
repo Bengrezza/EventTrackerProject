@@ -71,12 +71,12 @@ public class User {
 		this.createdAt = createdAt;
 	}
 
-	public List<Beer> getBeverages() {
+	public List<Beer> getBeers() {
 		return beers;
 	}
 
-	public void setBeverages(List<Beer> beverages) {
-		this.beers = beverages;
+	public void setBeers(List<Beer> beers) {
+		this.beers = beers;
 	}
 
 	@Override

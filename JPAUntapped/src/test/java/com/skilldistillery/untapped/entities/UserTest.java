@@ -1,7 +1,7 @@
 package com.skilldistillery.untapped.entities;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -47,13 +47,13 @@ class UserTest {
 	void test() {
 		assertEquals("Johnny", user.getFirstName());
 		assertEquals("Bobbert", user.getLastName());
-		assertTrue(user.getCreatedAt().toString().contains("2019"));
+		assertFalse(user.getCreatedAt().toString().contains("2022"));
 	}
 
 	@Test
-	@DisplayName("Test relationship with beverage")
+	@DisplayName("Test relationship with beer")
 	void test1() {
-		assertEquals("Night Hawk", user.getBeverages().get(0).getName());
+		assertEquals("Night Hawk", user.getBeers().get(0).getName());
 	}
 
 }

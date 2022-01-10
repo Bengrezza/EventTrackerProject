@@ -55,8 +55,8 @@ class BeerTest {
 		assertEquals(0, beer.getCalories());
 		assertEquals(8, beer.getVolume());
 		assertTrue(beer.isActive());
-		assertTrue(beer.getCreatedAt().toString().contains("2019"));
-		assertFalse(beer.getUpdatedAt().toString().contains("2019"));
+		assertTrue(beer.getCreatedAt().toString().contains("2022"));
+		assertTrue(beer.getUpdatedAt().toString().contains("2022"));
 	}
 
 	@Test
