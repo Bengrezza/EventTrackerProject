@@ -1,7 +1,6 @@
 package com.skilldistillery.untapped.entities;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import javax.persistence.EntityManager;
@@ -15,11 +14,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-class BeerTest {
+class UserTest {
 
 	private static EntityManagerFactory emf;
 	private EntityManager em;
-	private Beer beer;
+	private User user;
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
@@ -34,35 +33,27 @@ class BeerTest {
 	@BeforeEach
 	void setUp() throws Exception {
 		em = emf.createEntityManager();
-		beer = em.find(Beer.class, 1);
+		user = em.find(User.class, 1);
 	}
 
 	@AfterEach
 	void tearDown() throws Exception {
 		em.close();
-		beer = null;
+		user = null;
 	}
 
 	@Test
 	@DisplayName("Test the primary fields")
 	void test() {
-		assertEquals("water", beer.getName());
-		assertEquals("H2O from the tap", beer.getDescription());
-		assertEquals("water", beer.getIngredients());
-		assertFalse(beer.isCaffeinated());
-		assertFalse(beer.isContainsAlcohol());
-		assertEquals(0, beer.getCaffeine());
-		assertEquals(0, beer.getCalories());
-		assertEquals(8, beer.getVolume());
-		assertTrue(beer.isActive());
-		assertTrue(beer.getCreatedAt().toString().contains("2019"));
-		assertTrue(beer.getUpdatedAt().toString().contains("2019"));
+		assertEquals("Bobby", user.getFirstName());
+		assertEquals("Lee", user.getLastName());
+		assertTrue(user.getCreatedAt().toString().contains("2019"));
 	}
 
 	@Test
-	@DisplayName("Test relationship with beer tracker")
+	@DisplayName("Test relationship with beverage")
 	void test1() {
-		assertEquals("Bobby", beer.getUser().getFirstName());
+		assertEquals("water", user.getBeverages().get(0).getName());
 	}
 
 }
