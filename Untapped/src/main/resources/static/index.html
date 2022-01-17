@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Beer Tracker</title>
+  <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+  <h1>Welcome to UnTapped</h1> <p style="font-size:48px">&#127867;</p>
+    <h3>The World's Greatest Beer Tracker</h3>
+    <a href="http://localhost:8083/">Home</a> <br> <br>
+    
+    
+    <form name="getAllButton">
+      <button name="lookupAll">Get All Beers</button>
+    </form>
+    <br>
+    <form name="getByDate" id="getByDate">
+      <input type="number" name="year" placeholder="year (yyyy)" required min="2019"><br> 
+      <input type="number" name="month" placeholder="month (MM)" required min="1" min="12"><br> 
+      <input type="number" name="day" placeholder="day (dd)" required min="1" min="31"><br>
+      <button name="lookupByDate">Get Beers by Date</button>
+    </form>
+    <div id="output">
+      <div id="beerDataDate"></div>
+      <div id="beerData"></div>
+      <div id="oneBeerData"></div>
+      <div id="editBeer"></div>
+    </div>
+    <br>
+    <div>
+      <form name="addBeer">
+        <input type="text" name="name" placeholder="name" required minlength="1"> <br> 
+        <input type="text" name="description" placeholder="description" required minlength="1">
+        <br> <input type="text" name="ingredients" placeholder="ingredients" required> <br>
+        <input type="radio" name="alcoholic" value="true">Alcoholic<br>
+        <input type="radio" name="alcoholic" value="false" checked>Alcohol-Free<br> 
+        <input type="number" name="alcohol" placeholder="alcohol" default="0.0" required min="0.0"> <br>
+        <input type="number" name="calories" placeholder="calories" default="0" required min="0"> <br> 
+        <input type="number" name="volume" placeholder="volume" default="0" required min="1"> <br>
+        <button name="add">Add a Beer</button>
+      </form>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+</body>
+
+</html>

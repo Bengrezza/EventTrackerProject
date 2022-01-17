@@ -46,23 +46,23 @@ class BeerTest {
 	@Test
 	@DisplayName("Test the primary beer fields")
 	void test() {
-		assertEquals("Lagreat Don't Hate", beer.getName());
-		assertEquals("Lager", beer.getDescription());
-		assertEquals("barley, malt, water", beer.getIngredients());
+		assertEquals("water", beer.getName());
+		assertEquals("H2O from the tap", beer.getDescription());
+		assertEquals("water", beer.getIngredients());
 		assertFalse(beer.isAlcoholic());
 		assertFalse(beer.isContainsAlcohol());
 		assertEquals(0, beer.getAlcohol());
-		assertEquals(88, beer.getCalories());
-		assertEquals(16, beer.getVolume());
+		assertEquals(0, beer.getCalories());
+		assertEquals(8, beer.getVolume());
 		assertTrue(beer.isActive());
-		assertTrue(beer.getCreatedAt().toString().contains("2022"));
+		assertTrue(beer.getCreatedAt().toString().contains("2019"));
 		assertTrue(beer.getUpdatedAt().toString().contains("2022"));
 	}
 
 	@Test
 	@DisplayName("Test relationship with beer tracker")
 	void test1() {
-		assertEquals("Johnny", beer.getUser().getFirstName());
+		assertEquals("Bobby", beer.getUser().getFirstName());
 	}
 
 }
