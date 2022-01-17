@@ -46,8 +46,8 @@ class BeerTest {
 	@Test
 	@DisplayName("Test the primary beer fields")
 	void test() {
-		assertEquals("water", beer.getName());
-		assertEquals("H2O from the tap", beer.getDescription());
+		assertEquals("NightHawk", beer.getName());
+		assertEquals("Stout", beer.getDescription());
 		assertEquals("water", beer.getIngredients());
 		assertFalse(beer.isAlcoholic());
 		assertFalse(beer.isContainsAlcohol());

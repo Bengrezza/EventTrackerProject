@@ -46,8 +46,8 @@ class UserTest {
 	@DisplayName("Test the primary fields")
 	void test() {
 		assertEquals("Bobby", user.getFirstName());
-		assertEquals("Lee", user.getLastName());
-		assertTrue(user.getCreatedAt().toString().contains("2019"));
+		assertEquals("Dirt", user.getLastName());
+		assertTrue(user.getCreatedAt().toString().contains("2022"));
 	}
 
 	@Test
