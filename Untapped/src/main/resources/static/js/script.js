@@ -287,9 +287,9 @@ function showUpdateForm(beer) {
 			active : true,
 			user : {
 				id : 1,
-				firstName : "Johnny",
-				lastName : "Bobbert",
-				createdAt : "2019-01-10T07:00:00.000+0000"
+				firstName : "JoeBob",
+				lastName : "Dirt",
+				createdAt : "2019-11-30T07:00:00.000+0000"
 			}
 		};
 
